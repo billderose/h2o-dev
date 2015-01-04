@@ -153,8 +153,7 @@ public class Frame extends Lockable<Frame> {
   /** Returns the first readable vector. 
    *  @return the first readable Vec */
   public final Vec anyVec() {
-    Vec c0 = _col0; // single read
-    if( c0 != null ) return c0;
+    if( _col0 != null ) return _col0;
     for( Vec v : vecs() )
       if( v.readable() )
         return (_col0 = v);
